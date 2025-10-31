@@ -1,0 +1,84 @@
+:root{
+  --bg:#fafafa; --card:#fff; --ink:#222; --muted:#666; --border:#e7e7e7;
+  --ok:#0a7d34; --warn:#b56a00; --bad:#b00020; --chip:#eef3ff;
+}
+*{ box-sizing: border-box; }
+body{ margin:0; background:var(--bg); color:var(--ink);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; }
+header{ background:#fff; border-bottom:1px solid var(--border);
+  padding:1rem 1.25rem; position:sticky; top:0; z-index:10; }
+h1{ margin:0; font-size:1.2rem; }
+.muted{ color:var(--muted); font-size:.95rem; }
+.wrap{ max-width:1150px; margin:0 auto; padding:1rem; }
+.card{ background:var(--card); border:1px solid var(--border); border-radius:1rem; padding:1rem; }
+.grid{ display:grid; gap:1rem; }
+
+form.filters{ display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap:.75rem; margin:.75rem 0 1rem; }
+select, input, button, a.btn{ padding:.55rem .65rem; border:1px solid var(--border);
+  border-radius:.5rem; background:#fff; }
+button{ cursor:pointer; }
+a.btn{ text-decoration:none; color:inherit; display:inline-block; }
+
+table{ width:100%; border-collapse:collapse; }
+th, td{ padding:.6rem .5rem; border-bottom:1px solid var(--border);
+  text-align:left; font-size:.95rem; vertical-align:top; }
+th{ background:#f9fafb; position:sticky; top:90px; z-index:5; }
+.right{ text-align:right; }
+.chip{ display:inline-block; background:var(--chip); padding:.2rem .5rem; border-radius:999px; }
+
+.ok{ color:var(--ok); font-weight:600; }
+.warn{ color:var(--warn); font-weight:600; }
+.bad{ color:var(--bad); font-weight:600; }
+
+.row-plain{
+  white-space:pre-wrap; font-family: ui-monospace, Menlo, Consolas, monospace;
+  background:#fff; border:1px dashed var(--border); padding:.5rem; border-radius:.5rem; margin-top:.5rem;
+}
+
+/* KPI Enhancements */
+.kpis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.kpi.pretty {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  flex: 1;
+  min-width: 220px;
+  padding: 1rem 1.2rem;
+  background: linear-gradient(145deg, rgba(79,103,255,0.15), rgba(73,162,255,0.1));
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: all .25s ease;
+}
+.kpi.pretty:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+.kpi-icon {
+  font-size: 1.8rem;
+  opacity: .9;
+}
+.kpi-label {
+  font-size: .85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: .2rem;
+}
+.kpi-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.kpi-value .muted {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
